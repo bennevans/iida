@@ -1,0 +1,26 @@
+#!/bin/bash
+sbatch --array=0-2 run_all/humanoid_continuous.slurm
+sbatch --array=0-2 run_all/humanoid_feed_forward.slurm
+sbatch --array=0-2 run_all/humanoid_feed_forward_fov.slurm
+sbatch --array=0-2 run_all/humanoid_rnn.slurm
+sbatch --array=0-2 run_all/humanoid_transformer.slurm
+sbatch --array=0-2 run_all/pushbox_continuous.slurm
+sbatch --array=0-2 run_all/pushbox_feed_forward.slurm
+sbatch --array=0-2 run_all/pushbox_feed_forward_fov.slurm
+sbatch --array=0-2 run_all/pushbox_rnn.slurm
+sbatch --array=0-2 run_all/pushbox_transformer.slurm
+sbatch --array=0-2 run_all/slidepuck_continuous.slurm
+sbatch --array=0-2 run_all/slidepuck_feed_forward.slurm
+sbatch --array=0-2 run_all/slidepuck_feed_forward_fov.slurm
+sbatch --array=0-2 run_all/slidepuck_rnn.slurm
+sbatch --array=0-2 run_all/slidepuck_transformer.slurm
+sbatch --array=0-2 run_all/swimmer_continuous.slurm
+sbatch --array=0-2 run_all/swimmer_feed_forward.slurm
+sbatch --array=0-2 run_all/swimmer_feed_forward_fov.slurm
+sbatch --array=0-2 run_all/swimmer_rnn.slurm
+sbatch --array=0-2 run_all/swimmer_transformer.slurm
+sbatch --array=0-2 run_all/hopper_continuous.slurm
+sbatch --array=0-2 run_all/hopper_feed_forward.slurm
+sbatch --array=0-2 run_all/hopper_feed_forward_fov.slurm
+sbatch --array=0-2 run_all/hopper_rnn.slurm
+sbatch --array=0-2 run_all/hopper_transformer.slurm

@@ -1,0 +1,31 @@
+env: Hopper
+model-config: model_configs/cont_latent.yaml
+
+train-dataset-location: /vast/bne215/data/varyingsim/datasets/training_hopper_relabeled_train_seed_1.pickle
+val-dataset-location: /vast/bne215/data/varyingsim/datasets/training_hopper_relabeled_val_seed_1.pickle
+test-datasets: [/vast/bne215/data/varyingsim/datasets/training_hopper_relabeled_test_0.0_seed_1.pickle, /vast/bne215/data/varyingsim/datasets/training_hopper_relabeled_test_0.5_seed_1.pickle, /vast/bne215/data/varyingsim/datasets/training_hopper_relabeled_test_1.0_seed_1.pickle]
+test-names: [test-0, test-0.5, test-1]
+output: /vast/bne215/data/varyingsim/experiments/hopper/
+
+dataset-type: RelabeledEpisodicFovDataset
+name: hopper_continuous
+group: hopper
+seed: 1
+device: cuda
+
+epochs: 30
+test-iter: 250
+
+use-obs-fn: True
+
+batch-size: 64
+lr: 1e-3
+context-size: 128
+num-workers: 8
+
+lr-step-size: 20
+lr-gamma: 0.1
+optim: adam
+
+
+# CUDA_VISIBLE_DEVICES=1 python run_exp.py -c da_configs/hopper.yaml --message "hopper 500"

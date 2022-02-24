@@ -1,0 +1,11 @@
+model: LVEBM
+model_hidden_sizes: [512, 512, 512]
+z_dim: 8
+n_rand: 16
+n_sample: 64
+n_elite: 16
+n_iter: 20
+use_self: False
+optim_type: cem
+gd_lr: 1e-2
+langevin_lambda: 0.1

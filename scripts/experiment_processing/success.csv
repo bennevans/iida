@@ -1,0 +1,10 @@
+object,rnn,ctx,ff
+duster_lite_eval,80.0,80.0,60.0
+jello_box_lite_eval,80.0,80.0,20.0
+paper_jello_box_lite_eval,30.0,70.0,30.0
+walnuts_lite_eval,50.0,10.0,40.0
+orange_tape_lite_eval,90.0,80.0,50.0
+cloth_blue_styrofoam_lite_eval,70.0,90.0,20.0
+cloth_netgear_lite_eval,10.0,10.0,0.0
+paper_spam_can_lite_eval,100.0,40.0,30.0
+red_bowl_lite_eval,10.0,100.0,0.0

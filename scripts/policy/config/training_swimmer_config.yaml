@@ -1,0 +1,28 @@
+num_train_paths: 80
+num_val_paths: 10
+num_test_paths: 10
+num_episodes: 10
+n_stripes: 30
+prop_train_stripe: 0.8
+prop_val_stripe: 0.1
+prop_test_stripe: 0.1
+novel_test_probs: [0., 0.5, 1.0]
+fov_params:
+  torso_mass:
+    low: 25.0
+    high: 45.0
+  mid_mass:
+    low: 25.0
+    high: 45.0
+  back_mass:
+    low: 25.0
+    high: 45.0
+  torso_length:
+    low: 0.08
+    high: 0.12
+  mid_length:
+    low: 0.08
+    high: 0.12
+  back_length:
+    low: 0.08
+    high: 0.12

@@ -1,0 +1,37 @@
+num_train_paths: 80
+num_val_paths: 10
+num_test_paths: 10
+num_episodes: 10
+n_stripes: 30
+prop_train_stripe: 0.8
+prop_val_stripe: 0.1
+prop_test_stripe: 0.1
+novel_test_probs: [0., 0.5, 1.0]
+fov_params:
+  torso_mass:
+    low: 3.534291735288517
+    high: 3.534291735288517
+  thigh_mass:
+    low: 3.9269908169872427
+    high: 3.9269908169872427
+  leg_mass:
+    low: 2.7143360527015816
+    high: 2.7143360527015816
+  foot_mass:
+    low: 5.0893800988154645
+    high: 5.0893800988154645
+  torso_length:
+    low: 0.05
+    high: 0.05
+  thigh_length:
+    low: 0.05
+    high: 0.05
+  leg_length:
+    low: 0.04
+    high: 0.04
+  foot_length:
+    low: 0.06
+    high: 0.06
+
+
+  

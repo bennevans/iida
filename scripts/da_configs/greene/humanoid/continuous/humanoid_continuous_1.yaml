@@ -1,0 +1,27 @@
+env: Humanoid
+model-config: model_configs/cont_latent.yaml
+
+output: /vast/bne215/data/varyingsim/experiments/humanoid/
+
+train-dataset-location:  /vast/bne215/data/varyingsim/datasets/training_humanoid_relabeled_train_seed_1.pickle
+val-dataset-location:  /vast/bne215/data/varyingsim/datasets/training_humanoid_relabeled_val_seed_1.pickle
+test-datasets: [ /vast/bne215/data/varyingsim/datasets/training_humanoid_relabeled_test_0.0_seed_1.pickle,  /vast/bne215/data/varyingsim/datasets/training_humanoid_relabeled_test_0.5_seed_1.pickle,  /vast/bne215/data/varyingsim/datasets/training_humanoid_relabeled_test_1.0_seed_1.pickle]
+test-names: [test-0, test-0.5, test-1]
+
+dataset-type: RelabeledEpisodicFovDataset
+name: humanoid_continuous
+group: humanoid
+seed: 1
+device: cuda
+
+epochs: 4
+test-iter: 200
+
+batch-size: 64
+lr: 1e-3
+context-size: 128
+num-workers: 8
+
+lr-step-size: 3
+lr-gamma: 0.1
+optim: adam

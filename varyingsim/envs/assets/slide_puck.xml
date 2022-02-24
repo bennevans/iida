@@ -1,0 +1,38 @@
+<mujoco>
+   <option integrator="RK4" timestep="0.001" wind="0.0 0.0 0.0" density="1.2">
+   <!-- <option timestep="0.001" wind="0.0 0.0 0.0" density="1.2"> -->
+   </option>
+   <visual>
+      <headlight ambient=".4 .4 .4" diffuse=".8 .8 .8" specular="0.1 0.1 0.1"/>
+   </visual>
+   <asset>
+      <texture name="skybox" type="skybox" builtin="gradient" rgb1=".5 .7 .8" rgb2="0 0 0"
+               width="800" height="800" mark="random" random="0.005" markrgb="1 .8 .8"/>
+      <texture name="table" type="2d" builtin="flat" rgb1=".8 .8 .8"
+               width="800" height="800"/>
+      <material name="table" texture="table" specular="1.0" reflectance="0.2"/>   
+  </asset>
+   <worldbody>
+      <light name="light" directional="true" diffuse="1. 1. 1." pos="0 0 0.1" dir="0 0 -1"/>
+      <body name="plane" euler="0.25 0.0 0.0">
+         <geom name="plane" type="plane" material="table" size="0 0 0.05" rgba=".1 .1 .1 1" friction="0.01 0.005 0.0001"/>
+      </body>
+      <body name="puck" pos="0 0 0.0205">
+         <joint type="free" name="puck" damping="0.0001"/>
+         <geom name="puck" type="cylinder" size=".025 .02" rgba=".8 0 .6 1" friction = "0.01 0.005 0.0001" mass="0.2" solimp="0.9 0.95 0.001 0.5 2"/> 
+      </body>
+      <body name="pusher" pos="0.0 0.0 0.05">
+         <joint name="pusher_x" type="slide" axis="1 0 0" damping="0.0"/>
+         <joint name="pusher_y" type="slide" axis="0 1 0" damping="0.0"/>
+         <geom name="pusher" type="capsule" size="0.02 0.05" pos="0 0 0.02" euler="0.0 0.0 0" friction="1.0 0.005 0001"/>
+      </body>
+
+   </worldbody>
+   <actuator>
+      <general name="start_x" joint="puck"/>
+      <general name="start_y" joint="puck"/>
+      <general name="push_angle" joint="puck"/>
+      <general name="push_vel" joint="puck"/>
+      <general name="new_push" joint="puck"/>
+    </actuator>
+</mujoco>

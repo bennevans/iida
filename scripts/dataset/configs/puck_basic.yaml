@@ -1,0 +1,49 @@
+# base_dir: /data/varyingsim/datasets/
+base_dir: data/
+suffix: "act_std_"
+same_act: False
+rand_reset: True
+same_state: False
+num_train_episodes: 1000
+num_train_actions: 10
+num_test_episodes: 100
+num_test_actions: 10
+num_val_episodes: 100
+num_val_actions: 10
+
+n_stripes: 30
+prop_train_stripe: 0.8
+prop_val_stripe: 0.1
+prop_test_stripe: 0.1
+novel_test_probs: [0., 0.5, 1.0]
+
+action_std: 0.05
+min_vel: 0.1
+max_vel: 0.3
+fov_params:
+  puck_mass:
+    low: 0.15
+    high: 0.4
+  friction:
+    low: 0.02
+    high: 0.1
+  pusher_friction:
+    low: 0.02
+    high: 0.1
+  wind_x:
+    low: -5.0
+    high: 5.0
+  wind_y:
+    low: -5.0
+    high: 5.0
+  table_tilt_x:
+    low: -1.0
+    high: 1.0
+  table_tilt_y:
+    low: -1.0
+    high: 1.0
+  damping:
+    low: 0.0001
+    high: 0.075
+
+  

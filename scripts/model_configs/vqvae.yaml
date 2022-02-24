@@ -1,0 +1,9 @@
+model: VQVAE
+encoder_hidden_sizes: [256, 256, 256]
+decoder_hidden_sizes: [512, 512, 512]
+embedding_vector_dim: 32
+discrete_latent_dim: 20
+vq_coef: 0.5
+commit_coef: 0.25
+ee_coef: 5.0
+eq_coef: 0.0

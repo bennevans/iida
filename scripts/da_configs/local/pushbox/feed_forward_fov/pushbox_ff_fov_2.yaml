@@ -1,0 +1,30 @@
+env: PushBoxOffset
+model-config: model_configs/feed_forward_fov.yaml
+
+output: /data/domain_adaptation/experiments/push_box/
+train-dataset-location: /data/varyingsim/datasets/push_box_K_100_R_2000_seed_2_train.pickle
+val-dataset-location: /data/varyingsim/datasets/push_box_K_20_R_100_seed_2_val.pickle
+test-datasets: [/data/varyingsim/datasets/push_box_K_20_R_100_seed_2_test.pickle]
+test-names: [test]
+
+dataset-type: EpisodicStartEndFovDataset
+name: pushbox_ff_fov
+group: pushbox_obs
+seed: 2
+device: cuda
+
+use-obs-fn: true
+
+epochs: 20000
+test-iter: 250
+save-iter: 5000
+
+obs-skip: 50
+
+batch-size: 64
+lr: 1e-3
+context-size: 8
+
+lr-step-size: 15000
+lr-gamma: 0.1
+optim: adam

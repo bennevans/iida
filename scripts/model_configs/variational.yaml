@@ -1,0 +1,6 @@
+model: Variational
+encoder_hidden_sizes: [256, 256, 256]
+decoder_hidden_sizes: [512, 512, 512]
+embedding_vector_dim: 32
+z_dim: 32
+beta: 0.0

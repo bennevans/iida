@@ -1,0 +1,19 @@
+<mujoco>
+
+   <option integrator="RK4" timestep="0.001">
+   </option>
+   <worldbody>
+      <light diffuse=".5 .5 .5" pos="0 0 3" dir="0 0 -1"/>    
+      <geom type="plane" size="1 1 0.1" rgba=".1 .1 .1 1"/>
+      <body name="box" pos="0 0 0.1">
+         <joint name="box_x" type="slide" axis="1 0 0"/>
+         <joint name="box_y" type="slide" axis="0 1 0"/>
+         <joint name="box_z" type="slide" axis="0 0 1"/>
+         <geom name="box" type="box" size=".1 .1 .1" rgba=".8 0 .6 1" friction = "1.1 0.005 0.0001"/>
+      </body>
+   </worldbody>
+   <actuator>
+        <motor name="box_x" gear="100" joint="box_x"/>
+        <motor name="box_y" gear="100" joint="box_y"/>
+    </actuator>
+</mujoco>

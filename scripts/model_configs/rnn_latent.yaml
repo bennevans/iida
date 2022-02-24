@@ -1,0 +1,10 @@
+model: ContinuousLatent
+encoder_hidden_sizes: [256]
+decoder_hidden_sizes: [256, 256]
+embedding_vector_dim: 8
+ee_coef: 0.0
+combine_method: mean
+jyo: false
+loss-type: mse
+recurrent: true
+

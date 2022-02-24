@@ -1,0 +1,24 @@
+torso_mass:
+  low: 1.7
+  high: 17.0
+thigh_mass:
+  low: 2.0
+  high: 20.0
+leg_mass:
+  low: 1.3
+  high: 13.0
+foot_mass:
+  low: 2.5
+  high: 25.0
+torso_length:
+  low: 0.025
+  high: 0.25
+thigh_length:
+  low: 0.025
+  high: 0.25
+leg_length:
+  low: 0.02
+  high: 0.2
+foot_length:
+  low: 0.03
+  high: 0.3

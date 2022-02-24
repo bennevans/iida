@@ -1,0 +1,7 @@
+model: OSI
+fov_dim: 4
+d_share: 32
+hidden_dynamics: [4096, 4096]
+hidden_shared: [512, 512]
+hidden_osi: [2048, 2048]
+relative_obs: True

@@ -1,0 +1,6 @@
+model: PEARL
+encoder_hidden_sizes: [256, 256, 256]
+decoder_hidden_sizes: [512, 512, 512]
+embedding_vector_dim: 512
+z_dim: 8
+beta: 0.001

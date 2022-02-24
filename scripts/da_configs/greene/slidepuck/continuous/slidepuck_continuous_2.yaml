@@ -1,0 +1,29 @@
+env: SlidePuck
+model-config: model_configs/cont_latent.yaml
+
+output: /vast/bne215/data/varyingsim/experiments/slide_puck/
+
+train-dataset-location: /vast/bne215/data/varyingsim/datasets/slide_puck_K_1000_R_10_seed_2_act_std_train.pickle
+val-dataset-location: /vast/bne215/data/varyingsim/datasets/slide_puck_K_100_R_10_seed_2_act_std_val.pickle
+test-datasets: [/vast/bne215/data/varyingsim/datasets/slide_puck_K_100_R_10_seed_2_act_std_test.pickle]
+test-names: [test]
+
+dataset-type: EpisodicStartEndFovDataset
+name: slidepuck_continuous
+group: slidepuck
+seed: 2
+
+epochs: 4000
+test-iter: 100
+save-iter: 5000
+
+obs-skip: 50
+
+batch-size: 64
+lr: 1e-3
+include-full: True
+context-size: 8
+
+lr-step-size: 2000
+lr-gamma: 0.1
+optim: adam

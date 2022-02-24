@@ -1,0 +1,2 @@
+model: FeedForward
+hidden_sizes: [256, 256]

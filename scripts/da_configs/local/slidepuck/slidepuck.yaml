@@ -1,0 +1,50 @@
+env: SlidePuck
+# model-config: model_configs/lvebm.yaml
+# model-config: model_configs/cvae.yaml
+# model-config: model_configs/cont_latent.yaml
+model-config: model_configs/feed_forward.yaml
+# model-config: model_configs/feed_forward_fov.yaml
+# model-config: model_configs/transformer_latent.yaml
+# obs_fn: slide_box_state_to_xycs
+
+output: /data/domain_adaptation/experiments/slide_puck/baseline
+
+# 100 episode 100 action local
+# train-dataset-location: /data/varyingsim/datasets/slide_puck_K_1000_R_10_seed_0_train.pickle
+# test-datasets: [/data/varyingsim/datasets/slide_puck_K_100_R_10_seed_0_test.pickle, /data/varyingsim/datasets/slide_puck_K_100_R_10_seed_3735928559_test_train.pickle, /data/varyingsim/datasets/slide_puck_K_100_R_10_seed_3735928559_test_test.pickle]
+# test-names: [test-ribbon, test-train-seed, test-test-seed]
+
+# train with action noise
+# regular train set
+train-dataset-location: /data/varyingsim/datasets/slide_puck_K_1000_R_10_seed_0_act_std_train.pickle
+# mean train set
+# train-dataset-location: /data/varyingsim/datasets/slide_puck_K_1000_R_10_seed_0_single_train.pickle
+test-datasets: [/data/varyingsim/datasets/slide_puck_K_100_R_10_seed_0_test.pickle, /data/varyingsim/datasets/slide_puck_K_100_R_10_seed_3735928559_test_train.pickle, /data/varyingsim/datasets/slide_puck_K_100_R_10_seed_3735928559_test_test.pickle, /data/varyingsim/datasets/slide_puck_K_100_R_10_seed_0_act_std_test.pickle]
+test-names: [test-ribbon, test-train-seed, test-test-seed, test-noise]
+
+dataset-type: EpisodicStartEndFovDataset
+name: slidepuck_ff_256
+group: slidepuck
+seed: 1
+device: cpu
+
+epochs: 4000
+test-iter: 100
+save-iter: 5000
+
+obs-skip: 50
+
+batch-size: 64
+lr: 1e-3
+include-full: True
+pad-till: 2000
+context-size: 8
+n-batch: 8
+
+lr-step-size: 2000
+lr-gamma: 0.1
+optim: adam
+
+# load-model-location: /data/domain_adaptation/experiments/push_box/baseline/proto_unsupervised-2021-04-29_23-25-26/
+# model-name: model.pickle
+# freeze-encoder: True

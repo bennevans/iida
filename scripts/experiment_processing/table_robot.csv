@@ -1,0 +1,2 @@
+environment,continuous,fov,ff,rnn,transformer,single,maml
+sliding,3.49e-3 (1.48e-4),N/A,7.42e-3 (5.00e-5),2.52e-3 (6.78e-5),2.43e-3 (6.76e-5),N/A,N/A

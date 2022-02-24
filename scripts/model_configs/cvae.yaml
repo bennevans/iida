@@ -1,0 +1,10 @@
+model: CVAE
+encoder_hidden_sizes: [512, 512, 512]
+decoder_hidden_sizes: [512, 512, 512]
+hidden_z_size: 64
+z_dim: 4
+n_rand: 16
+n_sample: 64
+n_elite: 16
+n_iter: 10
+beta: 1.0

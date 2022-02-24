@@ -1,0 +1,34 @@
+# base_dir: /data/varyingsim/datasets/
+base_dir: data/
+num_train_episodes: 100
+num_train_actions: 2000
+num_test_episodes: 20
+num_test_actions: 100
+num_val_episodes: 20
+num_val_actions: 100
+
+n_stripes: 30
+prop_train_stripe: 0.8
+prop_val_stripe: 0.1
+prop_test_stripe: 0.1
+novel_test_probs: [0., 0.5, 1.0]
+
+action_std: 0.5
+push_radius: 0.15
+push_length: 0.5
+fov_params:
+  com_offset:
+    low: -0.14
+    high: 0.14
+  box_mass:
+    low: 0.5
+    high: 2.5
+  floor_friction:
+    low: 0.7
+    high: 1.3
+  box_friction:
+    low: 0.7
+    high: 1.3
+  pusher_friction:
+    low: 0.7
+    high: 1.3

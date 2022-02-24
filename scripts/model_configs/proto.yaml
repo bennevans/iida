@@ -1,0 +1,15 @@
+model: Proto
+encoder_hidden_sizes: [256, 256, 256]
+decoder_hidden_sizes: [512, 512, 512]
+embedding_vector_dim: 32
+discrete_latent_dim: 10
+# embedding_vector_dim: 128
+# discrete_latent_dim: 128
+base_coef: 0.0
+proto_coef: 1.0
+single_entropy_coef: 0.0
+batch_entropy_coef: -0.0
+temp: 0.01
+tau: 0.1
+latent_type: regular
+use_predictor: True

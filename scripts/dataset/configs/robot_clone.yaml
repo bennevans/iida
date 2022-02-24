@@ -1,0 +1,62 @@
+seed: 0
+suffix: "robot_"
+same_act: True
+rand_reset: True
+same_state: True
+num_train_episodes: 18
+num_train_actions: 20
+num_test_episodes: 10
+num_test_actions: 20
+action_std: 0.1
+min_vel: 0.1
+max_vel: 0.3
+test_type: all
+fov_format: proportion
+fov_params:
+  puck_mass:
+    low: 0.15
+    high: 0.4
+    prop_train: 0.9
+    n_stripes: -1
+  # puck_size:
+  #   low: 0.01
+  #   high: 0.04
+  #   prop_train: 0.9
+  #   n_stripes: 4
+  friction:
+    low: 0.02
+    high: 0.1
+    prop_train: 0.9
+    n_stripes: -1
+  # pusher_friction:
+  #   low: 0.02
+  #   high: 0.1
+  #   prop_train: 0.9
+  #   n_stripes: -1
+  # wind_x:
+  #   low: -5.0
+  #   high: 5.0
+  #   prop_train: 0.9
+  #   n_stripes: -1
+  # wind_y:
+  #   low: -5.0
+  #   high: 5.0
+  #   prop_train: 0.9
+  #   n_stripes: -1
+  # table_tilt_x:
+  #   low: -1.0
+  #   high: 1.0
+  #   prop_train: 0.9
+  #   n_stripes: -1
+  # table_tilt_y:
+  #   low: -1.0
+  #   high: 1.0
+  #   prop_train: 0.9
+  #   n_stripes: -1
+  # damping:
+  #   low: 0.0001
+  #   high: 0.075
+  #   prop_train: 0.9
+  #   n_stripes: -1
+
+  

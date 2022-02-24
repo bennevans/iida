@@ -1,0 +1,36 @@
+env: SlidePuck
+
+model-config: model_configs/transformer_latent.yaml
+
+output: /data/domain_adaptation/experiments/sliding/baseline
+
+
+train-dataset-location: /data/varyingsim/datasets/slide_puck_K_18_R_10_seed_0_robot_train.pickle
+
+
+test-datasets: [/data/varyingsim/datasets/slide_puck_K_10_R_10_seed_0_robot_test.pickle]
+test-names: [test]
+
+dataset-type: EpisodicStartEndFovDataset
+name: sim_sliding_transformer
+group: sim_sliding
+seed: 1
+device: cuda
+
+project: domain_adaptation_icra
+
+epochs: 4000
+test-iter: 100
+save-iter: 2500
+
+batch-size: 64
+lr: 1e-3
+context-size: 4
+
+lr-step-size: 2000
+lr-gamma: 0.1
+optim: adam
+
+# load-model-location: /data/domain_adaptation/experiments/push_box/baseline/proto_unsupervised-2021-04-29_23-25-26/
+# model-name: model.pickle
+# freeze-encoder: True

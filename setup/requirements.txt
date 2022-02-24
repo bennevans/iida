@@ -1,0 +1,7 @@
+aim==2.1.5
+ConfigArgParse==1.2.3
+gym==0.18.0
+mujoco-py==2.0.2.13
+numpy==1.20.0
+PyYAML==5.4.1
+torch==1.7.1

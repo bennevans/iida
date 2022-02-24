@@ -1,0 +1,38 @@
+env: DummyEnv
+env-nu: 2
+env-nq: 2
+env-nv: 0
+
+model-config: model_configs/rnn_latent.yaml
+
+output: /data/domain_adaptation/experiments/sliding/baseline
+
+train-dataset-location: /data/datasets/iida_data/train/
+val-dataset-location: /data/datasets/iida_data/val/
+test-datasets: [/data/datasets/iida_data/test/]
+test-names: [test]
+
+dataset-type: URRobotPushDataset
+name: sliding_rnn
+group: ur_robot
+seed: 1
+device: cuda
+project: domain_adaptation_icra
+# project: robot_domain_adaptation
+
+
+epochs: 4000
+test-iter: 100
+save-iter: 2500
+
+batch-size: 64
+lr: 1e-3
+context-size: 4
+
+lr-step-size: 2000
+lr-gamma: 0.1
+optim: adam
+
+# load-model-location: /data/domain_adaptation/experiments/push_box/baseline/proto_unsupervised-2021-04-29_23-25-26/
+# model-name: model.pickle
+# freeze-encoder: True

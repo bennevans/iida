@@ -1,0 +1,32 @@
+env: Swimmer
+model-config: model_configs/transformer_latent.yaml
+
+train-dataset-location: /data/varyingsim/datasets/training_swimmer_relabeled_train_seed_2.pickle
+val-dataset-location: /data/varyingsim/datasets/training_swimmer_relabeled_val_seed_2.pickle
+test-datasets: [/data/varyingsim/datasets/training_swimmer_relabeled_test_0.0_seed_2.pickle, /data/varyingsim/datasets/training_swimmer_relabeled_test_0.5_seed_2.pickle, /data/varyingsim/datasets/training_swimmer_relabeled_test_1.0_seed_2.pickle]
+
+output: /data/domain_adaptation/experiments/swimmer/
+test-names: [test-0, test-0.5, test-1]
+
+dataset-type: RelabeledEpisodicFovDataset
+name: swimmer_transformer
+group: swimmer
+seed: 2
+device: cuda
+
+epochs: 4
+test-iter: 100
+
+use-obs-fn: True
+
+batch-size: 64
+lr: 1e-3
+context-size: 128
+num-workers: 8
+
+lr-step-size: 3
+lr-gamma: 0.1
+optim: adam
+
+
+# CUDA_VISIBLE_DEVICES=1 python run_exp.py -c da_configs/hopper.yaml --message "hopper 500"
