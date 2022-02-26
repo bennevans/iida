@@ -17,9 +17,14 @@ IIDA is a method designed to adapt dynamics models to environments with varying 
 
 ## Results
 We evaluate IIDA on a number of simulated experiments, as well as a real robot experiment. IIDA outperforms baselines and even beats models with access to the true environment dynamics parameters in most cases.
-![](figs/mse.png)       |  ![](figs/success.png)
-:-------------------------:|:-------------------------:
-Mean squared error $\pm$ std over 3 seeds. | Success rate for the robot sliding task
+| ![](figs/mse.png) | 
+| :-------------------------:|
+| Mean squared error and std over 3 seeds |
+
+| ![](figs/success.png) | 
+| :-------------------------:|
+| Success rate for the robot sliding task |
+
 
 We visualize the latent space learned on the robot sliding dataset using tSNE and see that it is learning self-consistient latents with similar objects close together in latent space.
 ![IIDA Latent](figs/latent.png)
