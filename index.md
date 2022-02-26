@@ -17,6 +17,7 @@ IIDA is a method designed to adapt dynamics models to environments with varying 
 
 ## Results
 We evaluate IIDA on a number of simulated experiments, as well as a real robot experiment. IIDA outperforms baselines and even beats models with access to the true environment dynamics parameters in most cases.
+
 | ![](figs/mse.png) | 
 | :-------------------------:|
 | Mean squared error and std over 3 seeds |
