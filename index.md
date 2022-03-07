@@ -3,7 +3,7 @@
 [Publication](https://bennevans.github.io/publication/iida/) &nbsp; &nbsp; [Code](https://github.com/bennevans/icra-iida)
 
 ### Authors
-**Ben Evans** &nbsp; &nbsp; Abitha Thankaraj &nbsp; &nbsp; Lerrel Pinto
+[**Ben Evans**](https://bennevans.github.io/) &nbsp; &nbsp; Abitha Thankaraj &nbsp; &nbsp; [Lerrel Pinto](https://www.lerrelpinto.com/)
  
 
 ## Abstract 
