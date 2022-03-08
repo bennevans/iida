@@ -1,7 +1,10 @@
-aim==2.1.5
-ConfigArgParse==1.2.3
-gym==0.18.0
-mujoco-py==2.0.2.13
-numpy==1.20.0
-PyYAML==5.4.1
-torch==1.7.1
+ConfigArgParse==1.5.3
+gym==0.23.0
+mujoco-py==2.1.2.14
+numpy==1.22.3
+numpy-quaternion==2022.2.10.14.20.39
+PyYAML==6.0
+torch==1.10.2
+torchgeometry==0.1.2
+tqdm==4.63.0
+wandb==0.12.11
