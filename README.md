@@ -26,7 +26,7 @@ pip install -r requirements.txt
 pip install -e . 
 ```
 
-4. Generate the simulated dataset or download it [here](todo.com). The robot dataset can be downloaded [here](todo.com).
+4. Generate the simulated dataset or download it [here](https://drive.google.com/drive/folders/1mctP-a7eKtctrBviPyKnUjK-chhA4tij).
 
 ## Dataset Generation Instructions
 ### Single-step Environments
