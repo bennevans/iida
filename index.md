@@ -1,6 +1,6 @@
 # Context is Everything: Implicit Identification for Dynamics Adaptation
 
-[Publication](https://bennevans.github.io/publication/iida/) &nbsp; &nbsp; [Code](https://github.com/bennevans/iida)
+[Publication](https://arxiv.org/abs/2203.05549) &nbsp; &nbsp; [Code](https://github.com/bennevans/iida)
 
 ### Authors
 [**Ben Evans**](https://bennevans.github.io/) &nbsp; &nbsp; Abitha Thankaraj &nbsp; &nbsp; [Lerrel Pinto](https://www.lerrelpinto.com/)
